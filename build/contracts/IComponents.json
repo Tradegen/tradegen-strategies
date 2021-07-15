@@ -1,0 +1,3255 @@
+{
+  "contractName": "IComponents",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "isDefault",
+          "type": "bool"
+        },
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "getIndicatorFromIndex",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "isDefault",
+          "type": "bool"
+        },
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "getComparatorFromIndex",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getDefaultIndicators",
+      "outputs": [
+        {
+          "internalType": "address[]",
+          "name": "",
+          "type": "address[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getIndicators",
+      "outputs": [
+        {
+          "internalType": "address[]",
+          "name": "",
+          "type": "address[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getDefaultComparators",
+      "outputs": [
+        {
+          "internalType": "address[]",
+          "name": "",
+          "type": "address[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getComparators",
+      "outputs": [
+        {
+          "internalType": "address[]",
+          "name": "",
+          "type": "address[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        }
+      ],
+      "name": "getUserPurchasedIndicators",
+      "outputs": [
+        {
+          "internalType": "address[]",
+          "name": "",
+          "type": "address[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        }
+      ],
+      "name": "getUserPurchasedComparators",
+      "outputs": [
+        {
+          "internalType": "address[]",
+          "name": "",
+          "type": "address[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "indicatorIndex",
+          "type": "uint256"
+        }
+      ],
+      "name": "checkIfUserPurchasedIndicator",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "comparatorIndex",
+          "type": "uint256"
+        }
+      ],
+      "name": "checkIfUserPurchasedComparator",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "indicatorAddress",
+          "type": "address"
+        }
+      ],
+      "name": "buyIndicator",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "comparatorAddress",
+          "type": "address"
+        }
+      ],
+      "name": "buyComparator",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "isDefault",
+          "type": "bool"
+        },
+        {
+          "internalType": "address",
+          "name": "indicatorAddress",
+          "type": "address"
+        }
+      ],
+      "name": "_addNewIndicator",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "isDefault",
+          "type": "bool"
+        },
+        {
+          "internalType": "address",
+          "name": "comparatorAddress",
+          "type": "address"
+        }
+      ],
+      "name": "_addNewComparator",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"bool\",\"name\":\"isDefault\",\"type\":\"bool\"},{\"internalType\":\"address\",\"name\":\"comparatorAddress\",\"type\":\"address\"}],\"name\":\"_addNewComparator\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bool\",\"name\":\"isDefault\",\"type\":\"bool\"},{\"internalType\":\"address\",\"name\":\"indicatorAddress\",\"type\":\"address\"}],\"name\":\"_addNewIndicator\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"comparatorAddress\",\"type\":\"address\"}],\"name\":\"buyComparator\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"indicatorAddress\",\"type\":\"address\"}],\"name\":\"buyIndicator\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"comparatorIndex\",\"type\":\"uint256\"}],\"name\":\"checkIfUserPurchasedComparator\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"indicatorIndex\",\"type\":\"uint256\"}],\"name\":\"checkIfUserPurchasedIndicator\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bool\",\"name\":\"isDefault\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"}],\"name\":\"getComparatorFromIndex\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getComparators\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getDefaultComparators\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getDefaultIndicators\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bool\",\"name\":\"isDefault\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"}],\"name\":\"getIndicatorFromIndex\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getIndicators\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"}],\"name\":\"getUserPurchasedComparators\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"}],\"name\":\"getUserPurchasedIndicators\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"_addNewComparator(bool,address)\":{\"details\":\"Adds a new comparator to the platform; meant to be called by the contract owner\",\"params\":{\"comparatorAddress\":\"Address of the contract where the comparator is implemented\",\"isDefault\":\"Whether the added comparator is a default comparator\"}},\"_addNewIndicator(bool,address)\":{\"details\":\"Adds a new indicator to the platform; meant to be called by the contract owner\",\"params\":{\"indicatorAddress\":\"Address of the contract where the indicator is implemented\",\"isDefault\":\"Whether the added indicator is a default indicator\"}},\"buyComparator(address)\":{\"details\":\"Purchase the given comparator\",\"params\":{\"comparatorAddress\":\"Address of the comparator to purchase\"}},\"buyIndicator(address)\":{\"details\":\"Purchase the given indicator\",\"params\":{\"indicatorAddress\":\"Address of the indicator to purchase\"}},\"checkIfUserPurchasedComparator(address,uint256)\":{\"details\":\"Checks whether the user purchased the given comparator\",\"params\":{\"comparatorIndex\":\"Index of the comparator in the comparators array\",\"user\":\"Address of the user\"},\"returns\":{\"_0\":\"bool Whether the user purchased the given comparator\"}},\"checkIfUserPurchasedIndicator(address,uint256)\":{\"details\":\"Checks whether the user purchased the given indicator\",\"params\":{\"indicatorIndex\":\"Index of the indicator in the indicators array\",\"user\":\"Address of the user\"},\"returns\":{\"_0\":\"bool Whether the user purchased the given indicator\"}},\"getComparatorFromIndex(bool,uint256)\":{\"details\":\"Returns the address of the comparator\",\"params\":{\"index\":\"Index of the comparator in array of available comparator\",\"isDefault\":\"Whether the comparator is a default comparator\"},\"returns\":{\"_0\":\"address Address of the comparator\"}},\"getComparators()\":{\"details\":\"Returns the address of each custom comparator\",\"returns\":{\"_0\":\"address[] The addresses of available custom comparator\"}},\"getDefaultComparators()\":{\"details\":\"Returns the address of each default comparator\",\"returns\":{\"_0\":\"address[] The addresses of available default comparator\"}},\"getDefaultIndicators()\":{\"details\":\"Returns the address of each default indicator\",\"returns\":{\"_0\":\"address[] The addresses of available default indicators\"}},\"getIndicatorFromIndex(bool,uint256)\":{\"details\":\"Returns the address of the indicator\",\"params\":{\"index\":\"Index of the indicator in array of available indicators\",\"isDefault\":\"Whether the indicator is a default indicator\"},\"returns\":{\"_0\":\"address Address of the indicator\"}},\"getIndicators()\":{\"details\":\"Returns the address of each custom indicator\",\"returns\":{\"_0\":\"address[] The addresses of available custom indicators\"}},\"getUserPurchasedComparators(address)\":{\"details\":\"Returns index of each comparator the user purchased\",\"params\":{\"user\":\"Address of the user\"},\"returns\":{\"_0\":\"uint[] The index in comparators array of each comparator the user purchased\"}},\"getUserPurchasedIndicators(address)\":{\"details\":\"Returns index of each indicator the user purchased\",\"params\":{\"user\":\"Address of the user\"},\"returns\":{\"_0\":\"uint[] The index in indicators array of each indicator the user purchased\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/C/Users/xavie/OneDrive/Desktop/TradeGen/Github/tradegen/contracts/interfaces/IComponents.sol\":\"IComponents\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/xavie/OneDrive/Desktop/TradeGen/Github/tradegen/contracts/interfaces/IComponents.sol\":{\"keccak256\":\"0x7b772c03716e144a95269db3163acc8cc3b42a1f86658476c0bf73c2b6ce9f46\",\"urls\":[\"bzz-raw://e3ca846e96661f0b858c6c8125719a44f873cad13c5e8607639c026ff612fb5d\",\"dweb:/ipfs/QmQJGWmvj1UUB3NZqAzhcy86jzfK7XhnSVi6Gdy9GwMXhZ\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity >=0.5.0;\r\n\r\ninterface IComponents {\r\n    /**\r\n    * @dev Returns the address of the indicator\r\n    * @param isDefault Whether the indicator is a default indicator\r\n    * @param index Index of the indicator in array of available indicators\r\n    * @return address Address of the indicator\r\n    */\r\n    function getIndicatorFromIndex(bool isDefault, uint index) external view returns (address);\r\n\r\n    /**\r\n    * @dev Returns the address of the comparator\r\n    * @param isDefault Whether the comparator is a default comparator\r\n    * @param index Index of the comparator in array of available comparator\r\n    * @return address Address of the comparator\r\n    */\r\n    function getComparatorFromIndex(bool isDefault, uint index) external view returns (address);\r\n\r\n    /**\r\n    * @dev Returns the address of each default indicator\r\n    * @return address[] The addresses of available default indicators\r\n    */\r\n    function getDefaultIndicators() external view returns (address[] memory);\r\n\r\n    /**\r\n    * @dev Returns the address of each custom indicator\r\n    * @return address[] The addresses of available custom indicators\r\n    */\r\n    function getIndicators() external view returns (address[] memory);\r\n\r\n    /**\r\n    * @dev Returns the address of each default comparator\r\n    * @return address[] The addresses of available default comparator\r\n    */\r\n    function getDefaultComparators() external view returns (address[] memory);\r\n\r\n    /**\r\n    * @dev Returns the address of each custom comparator\r\n    * @return address[] The addresses of available custom comparator\r\n    */\r\n    function getComparators() external view returns (address[] memory);\r\n\r\n    /**\r\n    * @dev Returns index of each indicator the user purchased\r\n    * @param user Address of the user\r\n    * @return uint[] The index in indicators array of each indicator the user purchased\r\n    */\r\n    function getUserPurchasedIndicators(address user) external view returns (address[] memory);\r\n\r\n    /**\r\n    * @dev Returns index of each comparator the user purchased\r\n    * @param user Address of the user\r\n    * @return uint[] The index in comparators array of each comparator the user purchased\r\n    */\r\n    function getUserPurchasedComparators(address user) external view returns (address[] memory);\r\n\r\n    /**\r\n    * @dev Checks whether the user purchased the given indicator\r\n    * @param user Address of the user\r\n    * @param indicatorIndex Index of the indicator in the indicators array\r\n    * @return bool Whether the user purchased the given indicator\r\n    */\r\n    function checkIfUserPurchasedIndicator(address user, uint indicatorIndex) external view returns (bool);\r\n\r\n    /**\r\n    * @dev Checks whether the user purchased the given comparator\r\n    * @param user Address of the user\r\n    * @param comparatorIndex Index of the comparator in the comparators array\r\n    * @return bool Whether the user purchased the given comparator\r\n    */\r\n    function checkIfUserPurchasedComparator(address user, uint comparatorIndex) external view returns (bool);\r\n\r\n    /**\r\n    * @dev Purchase the given indicator\r\n    * @param indicatorAddress Address of the indicator to purchase\r\n    */\r\n    function buyIndicator(address indicatorAddress) external;\r\n\r\n    /**\r\n    * @dev Purchase the given comparator\r\n    * @param comparatorAddress Address of the comparator to purchase\r\n    */\r\n    function buyComparator(address comparatorAddress) external;\r\n\r\n    /**\r\n    * @dev Adds a new indicator to the platform; meant to be called by the contract owner\r\n    * @param isDefault Whether the added indicator is a default indicator\r\n    * @param indicatorAddress Address of the contract where the indicator is implemented\r\n    */\r\n    function _addNewIndicator(bool isDefault, address indicatorAddress) external;\r\n\r\n    /**\r\n    * @dev Adds a new comparator to the platform; meant to be called by the contract owner\r\n    * @param isDefault Whether the added comparator is a default comparator\r\n    * @param comparatorAddress Address of the contract where the comparator is implemented\r\n    */\r\n    function _addNewComparator(bool isDefault, address comparatorAddress) external;\r\n}",
+  "sourcePath": "C:/Users/xavie/OneDrive/Desktop/TradeGen/Github/tradegen/contracts/interfaces/IComponents.sol",
+  "ast": {
+    "absolutePath": "/C/Users/xavie/OneDrive/Desktop/TradeGen/Github/tradegen/contracts/interfaces/IComponents.sol",
+    "exportedSymbols": {
+      "IComponents": [
+        346
+      ]
+    },
+    "id": 347,
+    "license": null,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 231,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:1"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 346,
+        "linearizedBaseContracts": [
+          346
+        ],
+        "name": "IComponents",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": {
+              "id": 232,
+              "nodeType": "StructuredDocumentation",
+              "src": "57:253:1",
+              "text": " @dev Returns the address of the indicator\n @param isDefault Whether the indicator is a default indicator\n @param index Index of the indicator in array of available indicators\n @return address Address of the indicator"
+            },
+            "functionSelector": "56542dab",
+            "id": 241,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getIndicatorFromIndex",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 237,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 234,
+                  "mutability": "mutable",
+                  "name": "isDefault",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 241,
+                  "src": "347:14:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 233,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "347:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 236,
+                  "mutability": "mutable",
+                  "name": "index",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 241,
+                  "src": "363:10:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 235,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "363:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "346:28:1"
+            },
+            "returnParameters": {
+              "id": 240,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 239,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 241,
+                  "src": "398:7:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 238,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "398:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "397:9:1"
+            },
+            "scope": 346,
+            "src": "316:91:1",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 242,
+              "nodeType": "StructuredDocumentation",
+              "src": "415:258:1",
+              "text": " @dev Returns the address of the comparator\n @param isDefault Whether the comparator is a default comparator\n @param index Index of the comparator in array of available comparator\n @return address Address of the comparator"
+            },
+            "functionSelector": "f4581c4d",
+            "id": 251,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getComparatorFromIndex",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 247,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 244,
+                  "mutability": "mutable",
+                  "name": "isDefault",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 251,
+                  "src": "711:14:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 243,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "711:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 246,
+                  "mutability": "mutable",
+                  "name": "index",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 251,
+                  "src": "727:10:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 245,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "727:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "710:28:1"
+            },
+            "returnParameters": {
+              "id": 250,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 249,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 251,
+                  "src": "762:7:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 248,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "762:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "761:9:1"
+            },
+            "scope": 346,
+            "src": "679:92:1",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 252,
+              "nodeType": "StructuredDocumentation",
+              "src": "779:140:1",
+              "text": " @dev Returns the address of each default indicator\n @return address[] The addresses of available default indicators"
+            },
+            "functionSelector": "a339e440",
+            "id": 258,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getDefaultIndicators",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 253,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "954:2:1"
+            },
+            "returnParameters": {
+              "id": 257,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 256,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 258,
+                  "src": "980:16:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 254,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "980:7:1",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 255,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "980:9:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "979:18:1"
+            },
+            "scope": 346,
+            "src": "925:73:1",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 259,
+              "nodeType": "StructuredDocumentation",
+              "src": "1006:138:1",
+              "text": " @dev Returns the address of each custom indicator\n @return address[] The addresses of available custom indicators"
+            },
+            "functionSelector": "0ff08321",
+            "id": 265,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getIndicators",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 260,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1172:2:1"
+            },
+            "returnParameters": {
+              "id": 264,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 263,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 265,
+                  "src": "1198:16:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 261,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1198:7:1",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 262,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1198:9:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1197:18:1"
+            },
+            "scope": 346,
+            "src": "1150:66:1",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 266,
+              "nodeType": "StructuredDocumentation",
+              "src": "1224:141:1",
+              "text": " @dev Returns the address of each default comparator\n @return address[] The addresses of available default comparator"
+            },
+            "functionSelector": "e5467a8f",
+            "id": 272,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getDefaultComparators",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 267,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1401:2:1"
+            },
+            "returnParameters": {
+              "id": 271,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 270,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 272,
+                  "src": "1427:16:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 268,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1427:7:1",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 269,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1427:9:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1426:18:1"
+            },
+            "scope": 346,
+            "src": "1371:74:1",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 273,
+              "nodeType": "StructuredDocumentation",
+              "src": "1453:139:1",
+              "text": " @dev Returns the address of each custom comparator\n @return address[] The addresses of available custom comparator"
+            },
+            "functionSelector": "45ad091c",
+            "id": 279,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getComparators",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 274,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1621:2:1"
+            },
+            "returnParameters": {
+              "id": 278,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 277,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 279,
+                  "src": "1647:16:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 275,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1647:7:1",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 276,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1647:9:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1646:18:1"
+            },
+            "scope": 346,
+            "src": "1598:67:1",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 280,
+              "nodeType": "StructuredDocumentation",
+              "src": "1673:202:1",
+              "text": " @dev Returns index of each indicator the user purchased\n @param user Address of the user\n @return uint[] The index in indicators array of each indicator the user purchased"
+            },
+            "functionSelector": "479e2047",
+            "id": 288,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getUserPurchasedIndicators",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 283,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 282,
+                  "mutability": "mutable",
+                  "name": "user",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 288,
+                  "src": "1917:12:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 281,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1917:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1916:14:1"
+            },
+            "returnParameters": {
+              "id": 287,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 286,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 288,
+                  "src": "1954:16:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 284,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1954:7:1",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 285,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1954:9:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1953:18:1"
+            },
+            "scope": 346,
+            "src": "1881:91:1",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 289,
+              "nodeType": "StructuredDocumentation",
+              "src": "1980:205:1",
+              "text": " @dev Returns index of each comparator the user purchased\n @param user Address of the user\n @return uint[] The index in comparators array of each comparator the user purchased"
+            },
+            "functionSelector": "82c7508f",
+            "id": 297,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getUserPurchasedComparators",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 292,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 291,
+                  "mutability": "mutable",
+                  "name": "user",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 297,
+                  "src": "2228:12:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 290,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2228:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2227:14:1"
+            },
+            "returnParameters": {
+              "id": 296,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 295,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 297,
+                  "src": "2265:16:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 293,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "2265:7:1",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 294,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "2265:9:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2264:18:1"
+            },
+            "scope": 346,
+            "src": "2191:92:1",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 298,
+              "nodeType": "StructuredDocumentation",
+              "src": "2291:259:1",
+              "text": " @dev Checks whether the user purchased the given indicator\n @param user Address of the user\n @param indicatorIndex Index of the indicator in the indicators array\n @return bool Whether the user purchased the given indicator"
+            },
+            "functionSelector": "4232f982",
+            "id": 307,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "checkIfUserPurchasedIndicator",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 303,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 300,
+                  "mutability": "mutable",
+                  "name": "user",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 307,
+                  "src": "2595:12:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 299,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2595:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 302,
+                  "mutability": "mutable",
+                  "name": "indicatorIndex",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 307,
+                  "src": "2609:19:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 301,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2609:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2594:35:1"
+            },
+            "returnParameters": {
+              "id": 306,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 305,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 307,
+                  "src": "2653:4:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 304,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2653:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2652:6:1"
+            },
+            "scope": 346,
+            "src": "2556:103:1",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 308,
+              "nodeType": "StructuredDocumentation",
+              "src": "2667:264:1",
+              "text": " @dev Checks whether the user purchased the given comparator\n @param user Address of the user\n @param comparatorIndex Index of the comparator in the comparators array\n @return bool Whether the user purchased the given comparator"
+            },
+            "functionSelector": "6327055e",
+            "id": 317,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "checkIfUserPurchasedComparator",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 313,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 310,
+                  "mutability": "mutable",
+                  "name": "user",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 317,
+                  "src": "2977:12:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 309,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2977:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 312,
+                  "mutability": "mutable",
+                  "name": "comparatorIndex",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 317,
+                  "src": "2991:20:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 311,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2991:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2976:36:1"
+            },
+            "returnParameters": {
+              "id": 316,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 315,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 317,
+                  "src": "3036:4:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 314,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3036:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3035:6:1"
+            },
+            "scope": 346,
+            "src": "2937:105:1",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 318,
+              "nodeType": "StructuredDocumentation",
+              "src": "3050:120:1",
+              "text": " @dev Purchase the given indicator\n @param indicatorAddress Address of the indicator to purchase"
+            },
+            "functionSelector": "c22b6e43",
+            "id": 323,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "buyIndicator",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 321,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 320,
+                  "mutability": "mutable",
+                  "name": "indicatorAddress",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 323,
+                  "src": "3198:24:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 319,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3198:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3197:26:1"
+            },
+            "returnParameters": {
+              "id": 322,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3232:0:1"
+            },
+            "scope": 346,
+            "src": "3176:57:1",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 324,
+              "nodeType": "StructuredDocumentation",
+              "src": "3241:123:1",
+              "text": " @dev Purchase the given comparator\n @param comparatorAddress Address of the comparator to purchase"
+            },
+            "functionSelector": "2c682dd7",
+            "id": 329,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "buyComparator",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 327,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 326,
+                  "mutability": "mutable",
+                  "name": "comparatorAddress",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 329,
+                  "src": "3393:25:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 325,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3393:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3392:27:1"
+            },
+            "returnParameters": {
+              "id": 328,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3428:0:1"
+            },
+            "scope": 346,
+            "src": "3370:59:1",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 330,
+              "nodeType": "StructuredDocumentation",
+              "src": "3437:267:1",
+              "text": " @dev Adds a new indicator to the platform; meant to be called by the contract owner\n @param isDefault Whether the added indicator is a default indicator\n @param indicatorAddress Address of the contract where the indicator is implemented"
+            },
+            "functionSelector": "908f977c",
+            "id": 337,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_addNewIndicator",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 335,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 332,
+                  "mutability": "mutable",
+                  "name": "isDefault",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 337,
+                  "src": "3736:14:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 331,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3736:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 334,
+                  "mutability": "mutable",
+                  "name": "indicatorAddress",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 337,
+                  "src": "3752:24:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 333,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3752:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3735:42:1"
+            },
+            "returnParameters": {
+              "id": 336,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3786:0:1"
+            },
+            "scope": 346,
+            "src": "3710:77:1",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 338,
+              "nodeType": "StructuredDocumentation",
+              "src": "3795:272:1",
+              "text": " @dev Adds a new comparator to the platform; meant to be called by the contract owner\n @param isDefault Whether the added comparator is a default comparator\n @param comparatorAddress Address of the contract where the comparator is implemented"
+            },
+            "functionSelector": "e7f197d8",
+            "id": 345,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_addNewComparator",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 343,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 340,
+                  "mutability": "mutable",
+                  "name": "isDefault",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 345,
+                  "src": "4100:14:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 339,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4100:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 342,
+                  "mutability": "mutable",
+                  "name": "comparatorAddress",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 345,
+                  "src": "4116:25:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 341,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4116:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4099:43:1"
+            },
+            "returnParameters": {
+              "id": 344,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4151:0:1"
+            },
+            "scope": 346,
+            "src": "4073:79:1",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 347,
+        "src": "28:4127:1"
+      }
+    ],
+    "src": "0:4155:1"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/C/Users/xavie/OneDrive/Desktop/TradeGen/Github/tradegen/contracts/interfaces/IComponents.sol",
+      "exportedSymbols": {
+        "IComponents": [
+          346
+        ]
+      },
+      "license": null
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.5",
+            ".0"
+          ]
+        },
+        "id": 231,
+        "name": "PragmaDirective",
+        "src": "0:24:1"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            346
+          ],
+          "name": "IComponents",
+          "scope": 347
+        },
+        "children": [
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "56542dab",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getIndicatorFromIndex",
+              "overrides": null,
+              "scope": 346,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @dev Returns the address of the indicator\n @param isDefault Whether the indicator is a default indicator\n @param index Index of the indicator in array of available indicators\n @return address Address of the indicator"
+                },
+                "id": 232,
+                "name": "StructuredDocumentation",
+                "src": "57:253:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "isDefault",
+                      "overrides": null,
+                      "scope": 241,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 233,
+                        "name": "ElementaryTypeName",
+                        "src": "347:4:1"
+                      }
+                    ],
+                    "id": 234,
+                    "name": "VariableDeclaration",
+                    "src": "347:14:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "index",
+                      "overrides": null,
+                      "scope": 241,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 235,
+                        "name": "ElementaryTypeName",
+                        "src": "363:4:1"
+                      }
+                    ],
+                    "id": 236,
+                    "name": "VariableDeclaration",
+                    "src": "363:10:1"
+                  }
+                ],
+                "id": 237,
+                "name": "ParameterList",
+                "src": "346:28:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 241,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 238,
+                        "name": "ElementaryTypeName",
+                        "src": "398:7:1"
+                      }
+                    ],
+                    "id": 239,
+                    "name": "VariableDeclaration",
+                    "src": "398:7:1"
+                  }
+                ],
+                "id": 240,
+                "name": "ParameterList",
+                "src": "397:9:1"
+              }
+            ],
+            "id": 241,
+            "name": "FunctionDefinition",
+            "src": "316:91:1"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "f4581c4d",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getComparatorFromIndex",
+              "overrides": null,
+              "scope": 346,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @dev Returns the address of the comparator\n @param isDefault Whether the comparator is a default comparator\n @param index Index of the comparator in array of available comparator\n @return address Address of the comparator"
+                },
+                "id": 242,
+                "name": "StructuredDocumentation",
+                "src": "415:258:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "isDefault",
+                      "overrides": null,
+                      "scope": 251,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 243,
+                        "name": "ElementaryTypeName",
+                        "src": "711:4:1"
+                      }
+                    ],
+                    "id": 244,
+                    "name": "VariableDeclaration",
+                    "src": "711:14:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "index",
+                      "overrides": null,
+                      "scope": 251,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 245,
+                        "name": "ElementaryTypeName",
+                        "src": "727:4:1"
+                      }
+                    ],
+                    "id": 246,
+                    "name": "VariableDeclaration",
+                    "src": "727:10:1"
+                  }
+                ],
+                "id": 247,
+                "name": "ParameterList",
+                "src": "710:28:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 251,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 248,
+                        "name": "ElementaryTypeName",
+                        "src": "762:7:1"
+                      }
+                    ],
+                    "id": 249,
+                    "name": "VariableDeclaration",
+                    "src": "762:7:1"
+                  }
+                ],
+                "id": 250,
+                "name": "ParameterList",
+                "src": "761:9:1"
+              }
+            ],
+            "id": 251,
+            "name": "FunctionDefinition",
+            "src": "679:92:1"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "a339e440",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getDefaultIndicators",
+              "overrides": null,
+              "scope": 346,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @dev Returns the address of each default indicator\n @return address[] The addresses of available default indicators"
+                },
+                "id": 252,
+                "name": "StructuredDocumentation",
+                "src": "779:140:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 253,
+                "name": "ParameterList",
+                "src": "954:2:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 258,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "address[]",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "length": null,
+                          "type": "address[]"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "address",
+                              "stateMutability": "nonpayable",
+                              "type": "address"
+                            },
+                            "id": 254,
+                            "name": "ElementaryTypeName",
+                            "src": "980:7:1"
+                          }
+                        ],
+                        "id": 255,
+                        "name": "ArrayTypeName",
+                        "src": "980:9:1"
+                      }
+                    ],
+                    "id": 256,
+                    "name": "VariableDeclaration",
+                    "src": "980:16:1"
+                  }
+                ],
+                "id": 257,
+                "name": "ParameterList",
+                "src": "979:18:1"
+              }
+            ],
+            "id": 258,
+            "name": "FunctionDefinition",
+            "src": "925:73:1"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "0ff08321",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getIndicators",
+              "overrides": null,
+              "scope": 346,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @dev Returns the address of each custom indicator\n @return address[] The addresses of available custom indicators"
+                },
+                "id": 259,
+                "name": "StructuredDocumentation",
+                "src": "1006:138:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 260,
+                "name": "ParameterList",
+                "src": "1172:2:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 265,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "address[]",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "length": null,
+                          "type": "address[]"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "address",
+                              "stateMutability": "nonpayable",
+                              "type": "address"
+                            },
+                            "id": 261,
+                            "name": "ElementaryTypeName",
+                            "src": "1198:7:1"
+                          }
+                        ],
+                        "id": 262,
+                        "name": "ArrayTypeName",
+                        "src": "1198:9:1"
+                      }
+                    ],
+                    "id": 263,
+                    "name": "VariableDeclaration",
+                    "src": "1198:16:1"
+                  }
+                ],
+                "id": 264,
+                "name": "ParameterList",
+                "src": "1197:18:1"
+              }
+            ],
+            "id": 265,
+            "name": "FunctionDefinition",
+            "src": "1150:66:1"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "e5467a8f",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getDefaultComparators",
+              "overrides": null,
+              "scope": 346,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @dev Returns the address of each default comparator\n @return address[] The addresses of available default comparator"
+                },
+                "id": 266,
+                "name": "StructuredDocumentation",
+                "src": "1224:141:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 267,
+                "name": "ParameterList",
+                "src": "1401:2:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 272,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "address[]",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "length": null,
+                          "type": "address[]"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "address",
+                              "stateMutability": "nonpayable",
+                              "type": "address"
+                            },
+                            "id": 268,
+                            "name": "ElementaryTypeName",
+                            "src": "1427:7:1"
+                          }
+                        ],
+                        "id": 269,
+                        "name": "ArrayTypeName",
+                        "src": "1427:9:1"
+                      }
+                    ],
+                    "id": 270,
+                    "name": "VariableDeclaration",
+                    "src": "1427:16:1"
+                  }
+                ],
+                "id": 271,
+                "name": "ParameterList",
+                "src": "1426:18:1"
+              }
+            ],
+            "id": 272,
+            "name": "FunctionDefinition",
+            "src": "1371:74:1"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "45ad091c",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getComparators",
+              "overrides": null,
+              "scope": 346,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @dev Returns the address of each custom comparator\n @return address[] The addresses of available custom comparator"
+                },
+                "id": 273,
+                "name": "StructuredDocumentation",
+                "src": "1453:139:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 274,
+                "name": "ParameterList",
+                "src": "1621:2:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 279,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "address[]",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "length": null,
+                          "type": "address[]"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "address",
+                              "stateMutability": "nonpayable",
+                              "type": "address"
+                            },
+                            "id": 275,
+                            "name": "ElementaryTypeName",
+                            "src": "1647:7:1"
+                          }
+                        ],
+                        "id": 276,
+                        "name": "ArrayTypeName",
+                        "src": "1647:9:1"
+                      }
+                    ],
+                    "id": 277,
+                    "name": "VariableDeclaration",
+                    "src": "1647:16:1"
+                  }
+                ],
+                "id": 278,
+                "name": "ParameterList",
+                "src": "1646:18:1"
+              }
+            ],
+            "id": 279,
+            "name": "FunctionDefinition",
+            "src": "1598:67:1"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "479e2047",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getUserPurchasedIndicators",
+              "overrides": null,
+              "scope": 346,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @dev Returns index of each indicator the user purchased\n @param user Address of the user\n @return uint[] The index in indicators array of each indicator the user purchased"
+                },
+                "id": 280,
+                "name": "StructuredDocumentation",
+                "src": "1673:202:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "user",
+                      "overrides": null,
+                      "scope": 288,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 281,
+                        "name": "ElementaryTypeName",
+                        "src": "1917:7:1"
+                      }
+                    ],
+                    "id": 282,
+                    "name": "VariableDeclaration",
+                    "src": "1917:12:1"
+                  }
+                ],
+                "id": 283,
+                "name": "ParameterList",
+                "src": "1916:14:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 288,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "address[]",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "length": null,
+                          "type": "address[]"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "address",
+                              "stateMutability": "nonpayable",
+                              "type": "address"
+                            },
+                            "id": 284,
+                            "name": "ElementaryTypeName",
+                            "src": "1954:7:1"
+                          }
+                        ],
+                        "id": 285,
+                        "name": "ArrayTypeName",
+                        "src": "1954:9:1"
+                      }
+                    ],
+                    "id": 286,
+                    "name": "VariableDeclaration",
+                    "src": "1954:16:1"
+                  }
+                ],
+                "id": 287,
+                "name": "ParameterList",
+                "src": "1953:18:1"
+              }
+            ],
+            "id": 288,
+            "name": "FunctionDefinition",
+            "src": "1881:91:1"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "82c7508f",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getUserPurchasedComparators",
+              "overrides": null,
+              "scope": 346,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @dev Returns index of each comparator the user purchased\n @param user Address of the user\n @return uint[] The index in comparators array of each comparator the user purchased"
+                },
+                "id": 289,
+                "name": "StructuredDocumentation",
+                "src": "1980:205:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "user",
+                      "overrides": null,
+                      "scope": 297,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 290,
+                        "name": "ElementaryTypeName",
+                        "src": "2228:7:1"
+                      }
+                    ],
+                    "id": 291,
+                    "name": "VariableDeclaration",
+                    "src": "2228:12:1"
+                  }
+                ],
+                "id": 292,
+                "name": "ParameterList",
+                "src": "2227:14:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 297,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "address[]",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "length": null,
+                          "type": "address[]"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "address",
+                              "stateMutability": "nonpayable",
+                              "type": "address"
+                            },
+                            "id": 293,
+                            "name": "ElementaryTypeName",
+                            "src": "2265:7:1"
+                          }
+                        ],
+                        "id": 294,
+                        "name": "ArrayTypeName",
+                        "src": "2265:9:1"
+                      }
+                    ],
+                    "id": 295,
+                    "name": "VariableDeclaration",
+                    "src": "2265:16:1"
+                  }
+                ],
+                "id": 296,
+                "name": "ParameterList",
+                "src": "2264:18:1"
+              }
+            ],
+            "id": 297,
+            "name": "FunctionDefinition",
+            "src": "2191:92:1"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "4232f982",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "checkIfUserPurchasedIndicator",
+              "overrides": null,
+              "scope": 346,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @dev Checks whether the user purchased the given indicator\n @param user Address of the user\n @param indicatorIndex Index of the indicator in the indicators array\n @return bool Whether the user purchased the given indicator"
+                },
+                "id": 298,
+                "name": "StructuredDocumentation",
+                "src": "2291:259:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "user",
+                      "overrides": null,
+                      "scope": 307,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 299,
+                        "name": "ElementaryTypeName",
+                        "src": "2595:7:1"
+                      }
+                    ],
+                    "id": 300,
+                    "name": "VariableDeclaration",
+                    "src": "2595:12:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "indicatorIndex",
+                      "overrides": null,
+                      "scope": 307,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 301,
+                        "name": "ElementaryTypeName",
+                        "src": "2609:4:1"
+                      }
+                    ],
+                    "id": 302,
+                    "name": "VariableDeclaration",
+                    "src": "2609:19:1"
+                  }
+                ],
+                "id": 303,
+                "name": "ParameterList",
+                "src": "2594:35:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 307,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 304,
+                        "name": "ElementaryTypeName",
+                        "src": "2653:4:1"
+                      }
+                    ],
+                    "id": 305,
+                    "name": "VariableDeclaration",
+                    "src": "2653:4:1"
+                  }
+                ],
+                "id": 306,
+                "name": "ParameterList",
+                "src": "2652:6:1"
+              }
+            ],
+            "id": 307,
+            "name": "FunctionDefinition",
+            "src": "2556:103:1"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "6327055e",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "checkIfUserPurchasedComparator",
+              "overrides": null,
+              "scope": 346,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @dev Checks whether the user purchased the given comparator\n @param user Address of the user\n @param comparatorIndex Index of the comparator in the comparators array\n @return bool Whether the user purchased the given comparator"
+                },
+                "id": 308,
+                "name": "StructuredDocumentation",
+                "src": "2667:264:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "user",
+                      "overrides": null,
+                      "scope": 317,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 309,
+                        "name": "ElementaryTypeName",
+                        "src": "2977:7:1"
+                      }
+                    ],
+                    "id": 310,
+                    "name": "VariableDeclaration",
+                    "src": "2977:12:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "comparatorIndex",
+                      "overrides": null,
+                      "scope": 317,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 311,
+                        "name": "ElementaryTypeName",
+                        "src": "2991:4:1"
+                      }
+                    ],
+                    "id": 312,
+                    "name": "VariableDeclaration",
+                    "src": "2991:20:1"
+                  }
+                ],
+                "id": 313,
+                "name": "ParameterList",
+                "src": "2976:36:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 317,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 314,
+                        "name": "ElementaryTypeName",
+                        "src": "3036:4:1"
+                      }
+                    ],
+                    "id": 315,
+                    "name": "VariableDeclaration",
+                    "src": "3036:4:1"
+                  }
+                ],
+                "id": 316,
+                "name": "ParameterList",
+                "src": "3035:6:1"
+              }
+            ],
+            "id": 317,
+            "name": "FunctionDefinition",
+            "src": "2937:105:1"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "c22b6e43",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "buyIndicator",
+              "overrides": null,
+              "scope": 346,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @dev Purchase the given indicator\n @param indicatorAddress Address of the indicator to purchase"
+                },
+                "id": 318,
+                "name": "StructuredDocumentation",
+                "src": "3050:120:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "indicatorAddress",
+                      "overrides": null,
+                      "scope": 323,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 319,
+                        "name": "ElementaryTypeName",
+                        "src": "3198:7:1"
+                      }
+                    ],
+                    "id": 320,
+                    "name": "VariableDeclaration",
+                    "src": "3198:24:1"
+                  }
+                ],
+                "id": 321,
+                "name": "ParameterList",
+                "src": "3197:26:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 322,
+                "name": "ParameterList",
+                "src": "3232:0:1"
+              }
+            ],
+            "id": 323,
+            "name": "FunctionDefinition",
+            "src": "3176:57:1"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "2c682dd7",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "buyComparator",
+              "overrides": null,
+              "scope": 346,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @dev Purchase the given comparator\n @param comparatorAddress Address of the comparator to purchase"
+                },
+                "id": 324,
+                "name": "StructuredDocumentation",
+                "src": "3241:123:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "comparatorAddress",
+                      "overrides": null,
+                      "scope": 329,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 325,
+                        "name": "ElementaryTypeName",
+                        "src": "3393:7:1"
+                      }
+                    ],
+                    "id": 326,
+                    "name": "VariableDeclaration",
+                    "src": "3393:25:1"
+                  }
+                ],
+                "id": 327,
+                "name": "ParameterList",
+                "src": "3392:27:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 328,
+                "name": "ParameterList",
+                "src": "3428:0:1"
+              }
+            ],
+            "id": 329,
+            "name": "FunctionDefinition",
+            "src": "3370:59:1"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "908f977c",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "_addNewIndicator",
+              "overrides": null,
+              "scope": 346,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @dev Adds a new indicator to the platform; meant to be called by the contract owner\n @param isDefault Whether the added indicator is a default indicator\n @param indicatorAddress Address of the contract where the indicator is implemented"
+                },
+                "id": 330,
+                "name": "StructuredDocumentation",
+                "src": "3437:267:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "isDefault",
+                      "overrides": null,
+                      "scope": 337,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 331,
+                        "name": "ElementaryTypeName",
+                        "src": "3736:4:1"
+                      }
+                    ],
+                    "id": 332,
+                    "name": "VariableDeclaration",
+                    "src": "3736:14:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "indicatorAddress",
+                      "overrides": null,
+                      "scope": 337,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 333,
+                        "name": "ElementaryTypeName",
+                        "src": "3752:7:1"
+                      }
+                    ],
+                    "id": 334,
+                    "name": "VariableDeclaration",
+                    "src": "3752:24:1"
+                  }
+                ],
+                "id": 335,
+                "name": "ParameterList",
+                "src": "3735:42:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 336,
+                "name": "ParameterList",
+                "src": "3786:0:1"
+              }
+            ],
+            "id": 337,
+            "name": "FunctionDefinition",
+            "src": "3710:77:1"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "e7f197d8",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "_addNewComparator",
+              "overrides": null,
+              "scope": 346,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @dev Adds a new comparator to the platform; meant to be called by the contract owner\n @param isDefault Whether the added comparator is a default comparator\n @param comparatorAddress Address of the contract where the comparator is implemented"
+                },
+                "id": 338,
+                "name": "StructuredDocumentation",
+                "src": "3795:272:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "isDefault",
+                      "overrides": null,
+                      "scope": 345,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 339,
+                        "name": "ElementaryTypeName",
+                        "src": "4100:4:1"
+                      }
+                    ],
+                    "id": 340,
+                    "name": "VariableDeclaration",
+                    "src": "4100:14:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "comparatorAddress",
+                      "overrides": null,
+                      "scope": 345,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 341,
+                        "name": "ElementaryTypeName",
+                        "src": "4116:7:1"
+                      }
+                    ],
+                    "id": 342,
+                    "name": "VariableDeclaration",
+                    "src": "4116:25:1"
+                  }
+                ],
+                "id": 343,
+                "name": "ParameterList",
+                "src": "4099:43:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 344,
+                "name": "ParameterList",
+                "src": "4151:0:1"
+              }
+            ],
+            "id": 345,
+            "name": "FunctionDefinition",
+            "src": "4073:79:1"
+          }
+        ],
+        "id": 346,
+        "name": "ContractDefinition",
+        "src": "28:4127:1"
+      }
+    ],
+    "id": 347,
+    "name": "SourceUnit",
+    "src": "0:4155:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.12+commit.27d51765.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.1",
+  "updatedAt": "2021-07-08T19:56:20.311Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "_addNewComparator(bool,address)": {
+        "details": "Adds a new comparator to the platform; meant to be called by the contract owner",
+        "params": {
+          "comparatorAddress": "Address of the contract where the comparator is implemented",
+          "isDefault": "Whether the added comparator is a default comparator"
+        }
+      },
+      "_addNewIndicator(bool,address)": {
+        "details": "Adds a new indicator to the platform; meant to be called by the contract owner",
+        "params": {
+          "indicatorAddress": "Address of the contract where the indicator is implemented",
+          "isDefault": "Whether the added indicator is a default indicator"
+        }
+      },
+      "buyComparator(address)": {
+        "details": "Purchase the given comparator",
+        "params": {
+          "comparatorAddress": "Address of the comparator to purchase"
+        }
+      },
+      "buyIndicator(address)": {
+        "details": "Purchase the given indicator",
+        "params": {
+          "indicatorAddress": "Address of the indicator to purchase"
+        }
+      },
+      "checkIfUserPurchasedComparator(address,uint256)": {
+        "details": "Checks whether the user purchased the given comparator",
+        "params": {
+          "comparatorIndex": "Index of the comparator in the comparators array",
+          "user": "Address of the user"
+        },
+        "returns": {
+          "_0": "bool Whether the user purchased the given comparator"
+        }
+      },
+      "checkIfUserPurchasedIndicator(address,uint256)": {
+        "details": "Checks whether the user purchased the given indicator",
+        "params": {
+          "indicatorIndex": "Index of the indicator in the indicators array",
+          "user": "Address of the user"
+        },
+        "returns": {
+          "_0": "bool Whether the user purchased the given indicator"
+        }
+      },
+      "getComparatorFromIndex(bool,uint256)": {
+        "details": "Returns the address of the comparator",
+        "params": {
+          "index": "Index of the comparator in array of available comparator",
+          "isDefault": "Whether the comparator is a default comparator"
+        },
+        "returns": {
+          "_0": "address Address of the comparator"
+        }
+      },
+      "getComparators()": {
+        "details": "Returns the address of each custom comparator",
+        "returns": {
+          "_0": "address[] The addresses of available custom comparator"
+        }
+      },
+      "getDefaultComparators()": {
+        "details": "Returns the address of each default comparator",
+        "returns": {
+          "_0": "address[] The addresses of available default comparator"
+        }
+      },
+      "getDefaultIndicators()": {
+        "details": "Returns the address of each default indicator",
+        "returns": {
+          "_0": "address[] The addresses of available default indicators"
+        }
+      },
+      "getIndicatorFromIndex(bool,uint256)": {
+        "details": "Returns the address of the indicator",
+        "params": {
+          "index": "Index of the indicator in array of available indicators",
+          "isDefault": "Whether the indicator is a default indicator"
+        },
+        "returns": {
+          "_0": "address Address of the indicator"
+        }
+      },
+      "getIndicators()": {
+        "details": "Returns the address of each custom indicator",
+        "returns": {
+          "_0": "address[] The addresses of available custom indicators"
+        }
+      },
+      "getUserPurchasedComparators(address)": {
+        "details": "Returns index of each comparator the user purchased",
+        "params": {
+          "user": "Address of the user"
+        },
+        "returns": {
+          "_0": "uint[] The index in comparators array of each comparator the user purchased"
+        }
+      },
+      "getUserPurchasedIndicators(address)": {
+        "details": "Returns index of each indicator the user purchased",
+        "params": {
+          "user": "Address of the user"
+        },
+        "returns": {
+          "_0": "uint[] The index in indicators array of each indicator the user purchased"
+        }
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

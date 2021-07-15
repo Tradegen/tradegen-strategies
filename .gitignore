@@ -1,0 +1,7 @@
+.secret
+.public_key
+.secret2
+.secret3
+celo_deploy.js
+get_account.js
+node_modules

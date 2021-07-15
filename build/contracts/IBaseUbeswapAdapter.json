@@ -1,0 +1,1688 @@
+{
+  "contractName": "IBaseUbeswapAdapter",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "MAX_SLIPPAGE_PERCENT",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "currencyKey",
+          "type": "address"
+        }
+      ],
+      "name": "getPrice",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "numberOfTokens",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "currencyKeyIn",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "currencyKeyOut",
+          "type": "address"
+        }
+      ],
+      "name": "getAmountsOut",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "assetToSwapFrom",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "assetToSwapTo",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amountToSwap",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "minAmountOut",
+          "type": "uint256"
+        }
+      ],
+      "name": "swapFromPool",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "assetToSwapFrom",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "assetToSwapTo",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amountToSwap",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "minAmountOut",
+          "type": "uint256"
+        }
+      ],
+      "name": "swapFromBot",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"MAX_SLIPPAGE_PERCENT\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"numberOfTokens\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"currencyKeyIn\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"currencyKeyOut\",\"type\":\"address\"}],\"name\":\"getAmountsOut\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"currencyKey\",\"type\":\"address\"}],\"name\":\"getPrice\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"assetToSwapFrom\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"assetToSwapTo\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amountToSwap\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"minAmountOut\",\"type\":\"uint256\"}],\"name\":\"swapFromBot\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"assetToSwapFrom\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"assetToSwapTo\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amountToSwap\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"minAmountOut\",\"type\":\"uint256\"}],\"name\":\"swapFromPool\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"getAmountsOut(uint256,address,address)\":{\"details\":\"Given an input asset amount, returns the maximum output amount of the other asset\",\"params\":{\"currencyKeyIn\":\"Address of the asset to be swap from\",\"currencyKeyOut\":\"Address of the asset to be swap to\",\"numberOfTokens\":\"Number of tokens\"},\"returns\":{\"_0\":\"uint Amount out of the asset\"}},\"getPrice(address)\":{\"details\":\"Given an input asset address, returns the price of the asset in cUSD\",\"params\":{\"currencyKey\":\"Address of the asset\"},\"returns\":{\"_0\":\"uint Price of the asset\"}},\"swapFromBot(address,address,uint256,uint256)\":{\"details\":\"Swaps an exact `amountToSwap` of an asset to another; meant to be called from a trading bot\",\"params\":{\"amountToSwap\":\"Exact amount of `assetToSwapFrom` to be swapped\",\"assetToSwapFrom\":\"Origin asset\",\"assetToSwapTo\":\"Destination asset\",\"minAmountOut\":\"the min amount of `assetToSwapTo` to be received from the swap\"},\"returns\":{\"_0\":\"uint The number of tokens received\"}},\"swapFromPool(address,address,uint256,uint256)\":{\"details\":\"Swaps an exact `amountToSwap` of an asset to another; meant to be called from a user pool\",\"params\":{\"amountToSwap\":\"Exact amount of `assetToSwapFrom` to be swapped\",\"assetToSwapFrom\":\"Origin asset\",\"assetToSwapTo\":\"Destination asset\",\"minAmountOut\":\"the min amount of `assetToSwapTo` to be received from the swap\"},\"returns\":{\"_0\":\"uint The number of tokens received\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/C/Users/xavie/OneDrive/Desktop/TradeGen/Github/tradegen/contracts/interfaces/IBaseUbeswapAdapter.sol\":\"IBaseUbeswapAdapter\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/xavie/OneDrive/Desktop/TradeGen/Github/tradegen/contracts/interfaces/IBaseUbeswapAdapter.sol\":{\"keccak256\":\"0x1439d821a5d3fd740d25ab88abab6b64d2aabc5a1e9a6164d2025f9542987ac7\",\"urls\":[\"bzz-raw://6f9aaef91d385d415a4be147b1569b0329a2cb841234b18aa8a8269db38cf6b8\",\"dweb:/ipfs/QmaFh6tqGWsHZhkyNP7BuvQQdSFEiJM2JrkZojfdR9ovmw\"]},\"/C/Users/xavie/OneDrive/Desktop/TradeGen/Github/tradegen/contracts/interfaces/IUniswapV2Router02.sol\":{\"keccak256\":\"0x64b787ec129083df2f7f20b35e88a6efbafe663790a394074738ba9c5a01db2b\",\"urls\":[\"bzz-raw://7cb506098131a036cf942d32130555835717d53e1b3c7e3a19ab77430eec1fc1\",\"dweb:/ipfs/QmTrtwF9re85dEiYtmhJy785UBsJXrxm5XvqXKikrviSxS\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity >=0.5.0;\r\n\r\nimport './IUniswapV2Router02.sol';\r\n\r\ninterface IBaseUbeswapAdapter {\r\n    function MAX_SLIPPAGE_PERCENT() external returns (uint);\r\n\r\n    /**\r\n    * @dev Given an input asset address, returns the price of the asset in cUSD\r\n    * @param currencyKey Address of the asset\r\n    * @return uint Price of the asset\r\n    */\r\n    function getPrice(address currencyKey) external view returns (uint);\r\n\r\n    /**\r\n    * @dev Given an input asset amount, returns the maximum output amount of the other asset\r\n    * @param numberOfTokens Number of tokens\r\n    * @param currencyKeyIn Address of the asset to be swap from\r\n    * @param currencyKeyOut Address of the asset to be swap to\r\n    * @return uint Amount out of the asset\r\n    */\r\n    function getAmountsOut(uint numberOfTokens, address currencyKeyIn, address currencyKeyOut) external view returns (uint);\r\n\r\n    /**\r\n    * @dev Swaps an exact `amountToSwap` of an asset to another; meant to be called from a user pool\r\n    * @param assetToSwapFrom Origin asset\r\n    * @param assetToSwapTo Destination asset\r\n    * @param amountToSwap Exact amount of `assetToSwapFrom` to be swapped\r\n    * @param minAmountOut the min amount of `assetToSwapTo` to be received from the swap\r\n    * @return uint The number of tokens received\r\n    */\r\n    function swapFromPool(address assetToSwapFrom, address assetToSwapTo, uint amountToSwap, uint minAmountOut) external returns (uint);\r\n\r\n    /**\r\n    * @dev Swaps an exact `amountToSwap` of an asset to another; meant to be called from a trading bot\r\n    * @param assetToSwapFrom Origin asset\r\n    * @param assetToSwapTo Destination asset\r\n    * @param amountToSwap Exact amount of `assetToSwapFrom` to be swapped\r\n    * @param minAmountOut the min amount of `assetToSwapTo` to be received from the swap\r\n    * @return uint The number of tokens received\r\n    */\r\n    function swapFromBot(address assetToSwapFrom, address assetToSwapTo, uint amountToSwap, uint minAmountOut) external returns (uint);\r\n}",
+  "sourcePath": "C:/Users/xavie/OneDrive/Desktop/TradeGen/Github/tradegen/contracts/interfaces/IBaseUbeswapAdapter.sol",
+  "ast": {
+    "absolutePath": "/C/Users/xavie/OneDrive/Desktop/TradeGen/Github/tradegen/contracts/interfaces/IBaseUbeswapAdapter.sol",
+    "exportedSymbols": {
+      "IBaseUbeswapAdapter": [
+        816
+      ]
+    },
+    "id": 817,
+    "license": null,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 761,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:2"
+      },
+      {
+        "absolutePath": "/C/Users/xavie/OneDrive/Desktop/TradeGen/Github/tradegen/contracts/interfaces/IUniswapV2Router02.sol",
+        "file": "./IUniswapV2Router02.sol",
+        "id": 762,
+        "nodeType": "ImportDirective",
+        "scope": 817,
+        "sourceUnit": 985,
+        "src": "28:34:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 816,
+        "linearizedBaseContracts": [
+          816
+        ],
+        "name": "IBaseUbeswapAdapter",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "32e4b286",
+            "id": 767,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "MAX_SLIPPAGE_PERCENT",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 763,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "132:2:2"
+            },
+            "returnParameters": {
+              "id": 766,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 765,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 767,
+                  "src": "153:4:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 764,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "153:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "152:6:2"
+            },
+            "scope": 816,
+            "src": "103:56:2",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 768,
+              "nodeType": "StructuredDocumentation",
+              "src": "167:178:2",
+              "text": " @dev Given an input asset address, returns the price of the asset in cUSD\n @param currencyKey Address of the asset\n @return uint Price of the asset"
+            },
+            "functionSelector": "41976e09",
+            "id": 775,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getPrice",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 771,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 770,
+                  "mutability": "mutable",
+                  "name": "currencyKey",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 775,
+                  "src": "369:19:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 769,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "369:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "368:21:2"
+            },
+            "returnParameters": {
+              "id": 774,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 773,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 775,
+                  "src": "413:4:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 772,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "413:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "412:6:2"
+            },
+            "scope": 816,
+            "src": "351:68:2",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 776,
+              "nodeType": "StructuredDocumentation",
+              "src": "427:324:2",
+              "text": " @dev Given an input asset amount, returns the maximum output amount of the other asset\n @param numberOfTokens Number of tokens\n @param currencyKeyIn Address of the asset to be swap from\n @param currencyKeyOut Address of the asset to be swap to\n @return uint Amount out of the asset"
+            },
+            "functionSelector": "baf7fa99",
+            "id": 787,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAmountsOut",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 783,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 778,
+                  "mutability": "mutable",
+                  "name": "numberOfTokens",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 787,
+                  "src": "780:19:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 777,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "780:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 780,
+                  "mutability": "mutable",
+                  "name": "currencyKeyIn",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 787,
+                  "src": "801:21:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 779,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "801:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 782,
+                  "mutability": "mutable",
+                  "name": "currencyKeyOut",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 787,
+                  "src": "824:22:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 781,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "824:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "779:68:2"
+            },
+            "returnParameters": {
+              "id": 786,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 785,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 787,
+                  "src": "871:4:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 784,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "871:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "870:6:2"
+            },
+            "scope": 816,
+            "src": "757:120:2",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 788,
+              "nodeType": "StructuredDocumentation",
+              "src": "885:417:2",
+              "text": " @dev Swaps an exact `amountToSwap` of an asset to another; meant to be called from a user pool\n @param assetToSwapFrom Origin asset\n @param assetToSwapTo Destination asset\n @param amountToSwap Exact amount of `assetToSwapFrom` to be swapped\n @param minAmountOut the min amount of `assetToSwapTo` to be received from the swap\n @return uint The number of tokens received"
+            },
+            "functionSelector": "e5414cd0",
+            "id": 801,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "swapFromPool",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 797,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 790,
+                  "mutability": "mutable",
+                  "name": "assetToSwapFrom",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 801,
+                  "src": "1330:23:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 789,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1330:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 792,
+                  "mutability": "mutable",
+                  "name": "assetToSwapTo",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 801,
+                  "src": "1355:21:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 791,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1355:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 794,
+                  "mutability": "mutable",
+                  "name": "amountToSwap",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 801,
+                  "src": "1378:17:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 793,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1378:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 796,
+                  "mutability": "mutable",
+                  "name": "minAmountOut",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 801,
+                  "src": "1397:17:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 795,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1397:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1329:86:2"
+            },
+            "returnParameters": {
+              "id": 800,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 799,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 801,
+                  "src": "1434:4:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 798,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1434:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1433:6:2"
+            },
+            "scope": 816,
+            "src": "1308:132:2",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 802,
+              "nodeType": "StructuredDocumentation",
+              "src": "1448:419:2",
+              "text": " @dev Swaps an exact `amountToSwap` of an asset to another; meant to be called from a trading bot\n @param assetToSwapFrom Origin asset\n @param assetToSwapTo Destination asset\n @param amountToSwap Exact amount of `assetToSwapFrom` to be swapped\n @param minAmountOut the min amount of `assetToSwapTo` to be received from the swap\n @return uint The number of tokens received"
+            },
+            "functionSelector": "0838fcb3",
+            "id": 815,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "swapFromBot",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 811,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 804,
+                  "mutability": "mutable",
+                  "name": "assetToSwapFrom",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 815,
+                  "src": "1894:23:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 803,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1894:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 806,
+                  "mutability": "mutable",
+                  "name": "assetToSwapTo",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 815,
+                  "src": "1919:21:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 805,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1919:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 808,
+                  "mutability": "mutable",
+                  "name": "amountToSwap",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 815,
+                  "src": "1942:17:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 807,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1942:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 810,
+                  "mutability": "mutable",
+                  "name": "minAmountOut",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 815,
+                  "src": "1961:17:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 809,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1961:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1893:86:2"
+            },
+            "returnParameters": {
+              "id": 814,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 813,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 815,
+                  "src": "1998:4:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 812,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1998:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1997:6:2"
+            },
+            "scope": 816,
+            "src": "1873:131:2",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 817,
+        "src": "66:1941:2"
+      }
+    ],
+    "src": "0:2007:2"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/C/Users/xavie/OneDrive/Desktop/TradeGen/Github/tradegen/contracts/interfaces/IBaseUbeswapAdapter.sol",
+      "exportedSymbols": {
+        "IBaseUbeswapAdapter": [
+          816
+        ]
+      },
+      "license": null
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.5",
+            ".0"
+          ]
+        },
+        "id": 761,
+        "name": "PragmaDirective",
+        "src": "0:24:2"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 985,
+          "absolutePath": "/C/Users/xavie/OneDrive/Desktop/TradeGen/Github/tradegen/contracts/interfaces/IUniswapV2Router02.sol",
+          "file": "./IUniswapV2Router02.sol",
+          "scope": 817,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 762,
+        "name": "ImportDirective",
+        "src": "28:34:2"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            816
+          ],
+          "name": "IBaseUbeswapAdapter",
+          "scope": 817
+        },
+        "children": [
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "functionSelector": "32e4b286",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "MAX_SLIPPAGE_PERCENT",
+              "overrides": null,
+              "scope": 816,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 763,
+                "name": "ParameterList",
+                "src": "132:2:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 767,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 764,
+                        "name": "ElementaryTypeName",
+                        "src": "153:4:2"
+                      }
+                    ],
+                    "id": 765,
+                    "name": "VariableDeclaration",
+                    "src": "153:4:2"
+                  }
+                ],
+                "id": 766,
+                "name": "ParameterList",
+                "src": "152:6:2"
+              }
+            ],
+            "id": 767,
+            "name": "FunctionDefinition",
+            "src": "103:56:2"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "41976e09",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getPrice",
+              "overrides": null,
+              "scope": 816,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @dev Given an input asset address, returns the price of the asset in cUSD\n @param currencyKey Address of the asset\n @return uint Price of the asset"
+                },
+                "id": 768,
+                "name": "StructuredDocumentation",
+                "src": "167:178:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "currencyKey",
+                      "overrides": null,
+                      "scope": 775,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 769,
+                        "name": "ElementaryTypeName",
+                        "src": "369:7:2"
+                      }
+                    ],
+                    "id": 770,
+                    "name": "VariableDeclaration",
+                    "src": "369:19:2"
+                  }
+                ],
+                "id": 771,
+                "name": "ParameterList",
+                "src": "368:21:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 775,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 772,
+                        "name": "ElementaryTypeName",
+                        "src": "413:4:2"
+                      }
+                    ],
+                    "id": 773,
+                    "name": "VariableDeclaration",
+                    "src": "413:4:2"
+                  }
+                ],
+                "id": 774,
+                "name": "ParameterList",
+                "src": "412:6:2"
+              }
+            ],
+            "id": 775,
+            "name": "FunctionDefinition",
+            "src": "351:68:2"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "baf7fa99",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getAmountsOut",
+              "overrides": null,
+              "scope": 816,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @dev Given an input asset amount, returns the maximum output amount of the other asset\n @param numberOfTokens Number of tokens\n @param currencyKeyIn Address of the asset to be swap from\n @param currencyKeyOut Address of the asset to be swap to\n @return uint Amount out of the asset"
+                },
+                "id": 776,
+                "name": "StructuredDocumentation",
+                "src": "427:324:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "numberOfTokens",
+                      "overrides": null,
+                      "scope": 787,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 777,
+                        "name": "ElementaryTypeName",
+                        "src": "780:4:2"
+                      }
+                    ],
+                    "id": 778,
+                    "name": "VariableDeclaration",
+                    "src": "780:19:2"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "currencyKeyIn",
+                      "overrides": null,
+                      "scope": 787,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 779,
+                        "name": "ElementaryTypeName",
+                        "src": "801:7:2"
+                      }
+                    ],
+                    "id": 780,
+                    "name": "VariableDeclaration",
+                    "src": "801:21:2"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "currencyKeyOut",
+                      "overrides": null,
+                      "scope": 787,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 781,
+                        "name": "ElementaryTypeName",
+                        "src": "824:7:2"
+                      }
+                    ],
+                    "id": 782,
+                    "name": "VariableDeclaration",
+                    "src": "824:22:2"
+                  }
+                ],
+                "id": 783,
+                "name": "ParameterList",
+                "src": "779:68:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 787,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 784,
+                        "name": "ElementaryTypeName",
+                        "src": "871:4:2"
+                      }
+                    ],
+                    "id": 785,
+                    "name": "VariableDeclaration",
+                    "src": "871:4:2"
+                  }
+                ],
+                "id": 786,
+                "name": "ParameterList",
+                "src": "870:6:2"
+              }
+            ],
+            "id": 787,
+            "name": "FunctionDefinition",
+            "src": "757:120:2"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "e5414cd0",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "swapFromPool",
+              "overrides": null,
+              "scope": 816,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @dev Swaps an exact `amountToSwap` of an asset to another; meant to be called from a user pool\n @param assetToSwapFrom Origin asset\n @param assetToSwapTo Destination asset\n @param amountToSwap Exact amount of `assetToSwapFrom` to be swapped\n @param minAmountOut the min amount of `assetToSwapTo` to be received from the swap\n @return uint The number of tokens received"
+                },
+                "id": 788,
+                "name": "StructuredDocumentation",
+                "src": "885:417:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "assetToSwapFrom",
+                      "overrides": null,
+                      "scope": 801,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 789,
+                        "name": "ElementaryTypeName",
+                        "src": "1330:7:2"
+                      }
+                    ],
+                    "id": 790,
+                    "name": "VariableDeclaration",
+                    "src": "1330:23:2"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "assetToSwapTo",
+                      "overrides": null,
+                      "scope": 801,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 791,
+                        "name": "ElementaryTypeName",
+                        "src": "1355:7:2"
+                      }
+                    ],
+                    "id": 792,
+                    "name": "VariableDeclaration",
+                    "src": "1355:21:2"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "amountToSwap",
+                      "overrides": null,
+                      "scope": 801,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 793,
+                        "name": "ElementaryTypeName",
+                        "src": "1378:4:2"
+                      }
+                    ],
+                    "id": 794,
+                    "name": "VariableDeclaration",
+                    "src": "1378:17:2"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "minAmountOut",
+                      "overrides": null,
+                      "scope": 801,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 795,
+                        "name": "ElementaryTypeName",
+                        "src": "1397:4:2"
+                      }
+                    ],
+                    "id": 796,
+                    "name": "VariableDeclaration",
+                    "src": "1397:17:2"
+                  }
+                ],
+                "id": 797,
+                "name": "ParameterList",
+                "src": "1329:86:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 801,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 798,
+                        "name": "ElementaryTypeName",
+                        "src": "1434:4:2"
+                      }
+                    ],
+                    "id": 799,
+                    "name": "VariableDeclaration",
+                    "src": "1434:4:2"
+                  }
+                ],
+                "id": 800,
+                "name": "ParameterList",
+                "src": "1433:6:2"
+              }
+            ],
+            "id": 801,
+            "name": "FunctionDefinition",
+            "src": "1308:132:2"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "0838fcb3",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "swapFromBot",
+              "overrides": null,
+              "scope": 816,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @dev Swaps an exact `amountToSwap` of an asset to another; meant to be called from a trading bot\n @param assetToSwapFrom Origin asset\n @param assetToSwapTo Destination asset\n @param amountToSwap Exact amount of `assetToSwapFrom` to be swapped\n @param minAmountOut the min amount of `assetToSwapTo` to be received from the swap\n @return uint The number of tokens received"
+                },
+                "id": 802,
+                "name": "StructuredDocumentation",
+                "src": "1448:419:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "assetToSwapFrom",
+                      "overrides": null,
+                      "scope": 815,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 803,
+                        "name": "ElementaryTypeName",
+                        "src": "1894:7:2"
+                      }
+                    ],
+                    "id": 804,
+                    "name": "VariableDeclaration",
+                    "src": "1894:23:2"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "assetToSwapTo",
+                      "overrides": null,
+                      "scope": 815,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 805,
+                        "name": "ElementaryTypeName",
+                        "src": "1919:7:2"
+                      }
+                    ],
+                    "id": 806,
+                    "name": "VariableDeclaration",
+                    "src": "1919:21:2"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "amountToSwap",
+                      "overrides": null,
+                      "scope": 815,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 807,
+                        "name": "ElementaryTypeName",
+                        "src": "1942:4:2"
+                      }
+                    ],
+                    "id": 808,
+                    "name": "VariableDeclaration",
+                    "src": "1942:17:2"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "minAmountOut",
+                      "overrides": null,
+                      "scope": 815,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 809,
+                        "name": "ElementaryTypeName",
+                        "src": "1961:4:2"
+                      }
+                    ],
+                    "id": 810,
+                    "name": "VariableDeclaration",
+                    "src": "1961:17:2"
+                  }
+                ],
+                "id": 811,
+                "name": "ParameterList",
+                "src": "1893:86:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 815,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 812,
+                        "name": "ElementaryTypeName",
+                        "src": "1998:4:2"
+                      }
+                    ],
+                    "id": 813,
+                    "name": "VariableDeclaration",
+                    "src": "1998:4:2"
+                  }
+                ],
+                "id": 814,
+                "name": "ParameterList",
+                "src": "1997:6:2"
+              }
+            ],
+            "id": 815,
+            "name": "FunctionDefinition",
+            "src": "1873:131:2"
+          }
+        ],
+        "id": 816,
+        "name": "ContractDefinition",
+        "src": "66:1941:2"
+      }
+    ],
+    "id": 817,
+    "name": "SourceUnit",
+    "src": "0:2007:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.12+commit.27d51765.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.1",
+  "updatedAt": "2021-07-12T15:49:44.844Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "getAmountsOut(uint256,address,address)": {
+        "details": "Given an input asset amount, returns the maximum output amount of the other asset",
+        "params": {
+          "currencyKeyIn": "Address of the asset to be swap from",
+          "currencyKeyOut": "Address of the asset to be swap to",
+          "numberOfTokens": "Number of tokens"
+        },
+        "returns": {
+          "_0": "uint Amount out of the asset"
+        }
+      },
+      "getPrice(address)": {
+        "details": "Given an input asset address, returns the price of the asset in cUSD",
+        "params": {
+          "currencyKey": "Address of the asset"
+        },
+        "returns": {
+          "_0": "uint Price of the asset"
+        }
+      },
+      "swapFromBot(address,address,uint256,uint256)": {
+        "details": "Swaps an exact `amountToSwap` of an asset to another; meant to be called from a trading bot",
+        "params": {
+          "amountToSwap": "Exact amount of `assetToSwapFrom` to be swapped",
+          "assetToSwapFrom": "Origin asset",
+          "assetToSwapTo": "Destination asset",
+          "minAmountOut": "the min amount of `assetToSwapTo` to be received from the swap"
+        },
+        "returns": {
+          "_0": "uint The number of tokens received"
+        }
+      },
+      "swapFromPool(address,address,uint256,uint256)": {
+        "details": "Swaps an exact `amountToSwap` of an asset to another; meant to be called from a user pool",
+        "params": {
+          "amountToSwap": "Exact amount of `assetToSwapFrom` to be swapped",
+          "assetToSwapFrom": "Origin asset",
+          "assetToSwapTo": "Destination asset",
+          "minAmountOut": "the min amount of `assetToSwapTo` to be received from the swap"
+        },
+        "returns": {
+          "_0": "uint The number of tokens received"
+        }
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

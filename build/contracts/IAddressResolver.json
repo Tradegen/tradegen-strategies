@@ -1,0 +1,1725 @@
+{
+  "contractName": "IAddressResolver",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "contractName",
+          "type": "string"
+        }
+      ],
+      "name": "getContractAddress",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "tradingBotAddress",
+          "type": "address"
+        }
+      ],
+      "name": "checkIfTradingBotAddressIsValid",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "strategyAddress",
+          "type": "address"
+        }
+      ],
+      "name": "checkIfStrategyAddressIsValid",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "poolAddress",
+          "type": "address"
+        }
+      ],
+      "name": "checkIfPoolAddressIsValid",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "contractName",
+          "type": "string"
+        },
+        {
+          "internalType": "address",
+          "name": "newAddress",
+          "type": "address"
+        }
+      ],
+      "name": "setContractAddress",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "tradingBotAddress",
+          "type": "address"
+        }
+      ],
+      "name": "addTradingBotAddress",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "strategyAddress",
+          "type": "address"
+        }
+      ],
+      "name": "addStrategyAddress",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "poolAddress",
+          "type": "address"
+        }
+      ],
+      "name": "addPoolAddress",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"poolAddress\",\"type\":\"address\"}],\"name\":\"addPoolAddress\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"strategyAddress\",\"type\":\"address\"}],\"name\":\"addStrategyAddress\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"tradingBotAddress\",\"type\":\"address\"}],\"name\":\"addTradingBotAddress\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"poolAddress\",\"type\":\"address\"}],\"name\":\"checkIfPoolAddressIsValid\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"strategyAddress\",\"type\":\"address\"}],\"name\":\"checkIfStrategyAddressIsValid\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"tradingBotAddress\",\"type\":\"address\"}],\"name\":\"checkIfTradingBotAddressIsValid\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"contractName\",\"type\":\"string\"}],\"name\":\"getContractAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"contractName\",\"type\":\"string\"},{\"internalType\":\"address\",\"name\":\"newAddress\",\"type\":\"address\"}],\"name\":\"setContractAddress\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"addPoolAddress(address)\":{\"details\":\"Adds a new user pool address; meant to be called by the PoolManager contract\",\"params\":{\"poolAddress\":\"The address of the user pool\"}},\"addStrategyAddress(address)\":{\"details\":\"Adds a new strategy address; meant to be called by the StrategyManager contract\",\"params\":{\"strategyAddress\":\"The address of the strategy\"}},\"addTradingBotAddress(address)\":{\"details\":\"Adds a new trading bot address; meant to be called by the Strategy contract that owns the trading bot\",\"params\":{\"tradingBotAddress\":\"The address of the trading bot\"}},\"checkIfPoolAddressIsValid(address)\":{\"details\":\"Given an address, returns whether the address belongs to a user pool\",\"params\":{\"poolAddress\":\"The address to validate\"},\"returns\":{\"_0\":\"bool Whether the given address is a valid user pool address\"}},\"checkIfStrategyAddressIsValid(address)\":{\"details\":\"Given an address, returns whether the address belongs to a strategy\",\"params\":{\"strategyAddress\":\"The address to validate\"},\"returns\":{\"_0\":\"bool Whether the given address is a valid strategy address\"}},\"checkIfTradingBotAddressIsValid(address)\":{\"details\":\"Given an address, returns whether the address belongs to a trading bot\",\"params\":{\"tradingBotAddress\":\"The address to validate\"},\"returns\":{\"_0\":\"bool Whether the given address is a valid trading bot address\"}},\"getContractAddress(string)\":{\"details\":\"Given a contract name, returns the address of the contract\",\"params\":{\"contractName\":\"The name of the contract\"},\"returns\":{\"_0\":\"address The address associated with the given contract name\"}},\"setContractAddress(string,address)\":{\"details\":\"Updates the address for the given contract; meant to be called by AddressResolver owner\",\"params\":{\"contractName\":\"The name of the contract\",\"newAddress\":\"The new address for the given contract\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/C/Users/xavie/OneDrive/Desktop/TradeGen/Github/tradegen/contracts/interfaces/IAddressResolver.sol\":\"IAddressResolver\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/xavie/OneDrive/Desktop/TradeGen/Github/tradegen/contracts/interfaces/IAddressResolver.sol\":{\"keccak256\":\"0x7ef2a3b25c1b0b246055d0405c6318ce45a472963b73e0f8d26d799a7d1aa5c9\",\"urls\":[\"bzz-raw://361633f3a14e720b24b682f5a1ad04507a136238309538919dcba0bf37c16390\",\"dweb:/ipfs/QmeeNgCkx6PFg2S3Kqs2wjSkamoCL5YqqtX9RrBpBDxhZS\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity >=0.5.0;\r\n\r\ninterface IAddressResolver {\r\n    /**\r\n    * @dev Given a contract name, returns the address of the contract\r\n    * @param contractName The name of the contract\r\n    * @return address The address associated with the given contract name\r\n    */\r\n    function getContractAddress(string memory contractName) external view returns (address);\r\n\r\n    /**\r\n    * @dev Given an address, returns whether the address belongs to a trading bot\r\n    * @param tradingBotAddress The address to validate\r\n    * @return bool Whether the given address is a valid trading bot address\r\n    */\r\n    function checkIfTradingBotAddressIsValid(address tradingBotAddress) external view returns (bool);\r\n\r\n    /**\r\n    * @dev Given an address, returns whether the address belongs to a strategy\r\n    * @param strategyAddress The address to validate\r\n    * @return bool Whether the given address is a valid strategy address\r\n    */\r\n    function checkIfStrategyAddressIsValid(address strategyAddress) external view returns (bool);\r\n\r\n    /**\r\n    * @dev Given an address, returns whether the address belongs to a user pool\r\n    * @param poolAddress The address to validate\r\n    * @return bool Whether the given address is a valid user pool address\r\n    */\r\n    function checkIfPoolAddressIsValid(address poolAddress) external view returns (bool);\r\n\r\n    /**\r\n    * @dev Updates the address for the given contract; meant to be called by AddressResolver owner\r\n    * @param contractName The name of the contract\r\n    * @param newAddress The new address for the given contract\r\n    */\r\n    function setContractAddress(string memory contractName, address newAddress) external;\r\n\r\n    /**\r\n    * @dev Adds a new trading bot address; meant to be called by the Strategy contract that owns the trading bot\r\n    * @param tradingBotAddress The address of the trading bot\r\n    */\r\n    function addTradingBotAddress(address tradingBotAddress) external;\r\n\r\n    /**\r\n    * @dev Adds a new strategy address; meant to be called by the StrategyManager contract\r\n    * @param strategyAddress The address of the strategy\r\n    */\r\n    function addStrategyAddress(address strategyAddress) external;\r\n\r\n    /**\r\n    * @dev Adds a new user pool address; meant to be called by the PoolManager contract\r\n    * @param poolAddress The address of the user pool\r\n    */\r\n    function addPoolAddress(address poolAddress) external;\r\n}",
+  "sourcePath": "C:/Users/xavie/OneDrive/Desktop/TradeGen/Github/tradegen/contracts/interfaces/IAddressResolver.sol",
+  "ast": {
+    "absolutePath": "/C/Users/xavie/OneDrive/Desktop/TradeGen/Github/tradegen/contracts/interfaces/IAddressResolver.sol",
+    "exportedSymbols": {
+      "IAddressResolver": [
+        1010
+      ]
+    },
+    "id": 1011,
+    "license": null,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 951,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:2"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 1010,
+        "linearizedBaseContracts": [
+          1010
+        ],
+        "name": "IAddressResolver",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": {
+              "id": 952,
+              "nodeType": "StructuredDocumentation",
+              "src": "62:209:2",
+              "text": " @dev Given a contract name, returns the address of the contract\n @param contractName The name of the contract\n @return address The address associated with the given contract name"
+            },
+            "functionSelector": "04433bbc",
+            "id": 959,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getContractAddress",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 955,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 954,
+                  "mutability": "mutable",
+                  "name": "contractName",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 959,
+                  "src": "305:26:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 953,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "305:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "304:28:2"
+            },
+            "returnParameters": {
+              "id": 958,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 957,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 959,
+                  "src": "356:7:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 956,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "356:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "355:9:2"
+            },
+            "scope": 1010,
+            "src": "277:88:2",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 960,
+              "nodeType": "StructuredDocumentation",
+              "src": "373:227:2",
+              "text": " @dev Given an address, returns whether the address belongs to a trading bot\n @param tradingBotAddress The address to validate\n @return bool Whether the given address is a valid trading bot address"
+            },
+            "functionSelector": "683ad58f",
+            "id": 967,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "checkIfTradingBotAddressIsValid",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 963,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 962,
+                  "mutability": "mutable",
+                  "name": "tradingBotAddress",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 967,
+                  "src": "647:25:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 961,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "647:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "646:27:2"
+            },
+            "returnParameters": {
+              "id": 966,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 965,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 967,
+                  "src": "697:4:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 964,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "697:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "696:6:2"
+            },
+            "scope": 1010,
+            "src": "606:97:2",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 968,
+              "nodeType": "StructuredDocumentation",
+              "src": "711:219:2",
+              "text": " @dev Given an address, returns whether the address belongs to a strategy\n @param strategyAddress The address to validate\n @return bool Whether the given address is a valid strategy address"
+            },
+            "functionSelector": "debd7e8e",
+            "id": 975,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "checkIfStrategyAddressIsValid",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 971,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 970,
+                  "mutability": "mutable",
+                  "name": "strategyAddress",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 975,
+                  "src": "975:23:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 969,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "975:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "974:25:2"
+            },
+            "returnParameters": {
+              "id": 974,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 973,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 975,
+                  "src": "1023:4:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 972,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1023:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1022:6:2"
+            },
+            "scope": 1010,
+            "src": "936:93:2",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 976,
+              "nodeType": "StructuredDocumentation",
+              "src": "1037:217:2",
+              "text": " @dev Given an address, returns whether the address belongs to a user pool\n @param poolAddress The address to validate\n @return bool Whether the given address is a valid user pool address"
+            },
+            "functionSelector": "e51f8aba",
+            "id": 983,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "checkIfPoolAddressIsValid",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 979,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 978,
+                  "mutability": "mutable",
+                  "name": "poolAddress",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 983,
+                  "src": "1295:19:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 977,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1295:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1294:21:2"
+            },
+            "returnParameters": {
+              "id": 982,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 981,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 983,
+                  "src": "1339:4:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 980,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1339:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1338:6:2"
+            },
+            "scope": 1010,
+            "src": "1260:85:2",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 984,
+              "nodeType": "StructuredDocumentation",
+              "src": "1353:227:2",
+              "text": " @dev Updates the address for the given contract; meant to be called by AddressResolver owner\n @param contractName The name of the contract\n @param newAddress The new address for the given contract"
+            },
+            "functionSelector": "534e785c",
+            "id": 991,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setContractAddress",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 989,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 986,
+                  "mutability": "mutable",
+                  "name": "contractName",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 991,
+                  "src": "1614:26:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 985,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1614:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 988,
+                  "mutability": "mutable",
+                  "name": "newAddress",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 991,
+                  "src": "1642:18:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 987,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1642:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1613:48:2"
+            },
+            "returnParameters": {
+              "id": 990,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1670:0:2"
+            },
+            "scope": 1010,
+            "src": "1586:85:2",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 992,
+              "nodeType": "StructuredDocumentation",
+              "src": "1679:188:2",
+              "text": " @dev Adds a new trading bot address; meant to be called by the Strategy contract that owns the trading bot\n @param tradingBotAddress The address of the trading bot"
+            },
+            "functionSelector": "4343d159",
+            "id": 997,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addTradingBotAddress",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 995,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 994,
+                  "mutability": "mutable",
+                  "name": "tradingBotAddress",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 997,
+                  "src": "1903:25:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 993,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1903:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1902:27:2"
+            },
+            "returnParameters": {
+              "id": 996,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1938:0:2"
+            },
+            "scope": 1010,
+            "src": "1873:66:2",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 998,
+              "nodeType": "StructuredDocumentation",
+              "src": "1947:161:2",
+              "text": " @dev Adds a new strategy address; meant to be called by the StrategyManager contract\n @param strategyAddress The address of the strategy"
+            },
+            "functionSelector": "034b08fb",
+            "id": 1003,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addStrategyAddress",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 1001,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1000,
+                  "mutability": "mutable",
+                  "name": "strategyAddress",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1003,
+                  "src": "2142:23:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 999,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2142:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2141:25:2"
+            },
+            "returnParameters": {
+              "id": 1002,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2175:0:2"
+            },
+            "scope": 1010,
+            "src": "2114:62:2",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 1004,
+              "nodeType": "StructuredDocumentation",
+              "src": "2184:155:2",
+              "text": " @dev Adds a new user pool address; meant to be called by the PoolManager contract\n @param poolAddress The address of the user pool"
+            },
+            "functionSelector": "43499844",
+            "id": 1009,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addPoolAddress",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 1007,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1006,
+                  "mutability": "mutable",
+                  "name": "poolAddress",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1009,
+                  "src": "2369:19:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1005,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2369:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2368:21:2"
+            },
+            "returnParameters": {
+              "id": 1008,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2398:0:2"
+            },
+            "scope": 1010,
+            "src": "2345:54:2",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1011,
+        "src": "28:2374:2"
+      }
+    ],
+    "src": "0:2402:2"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/C/Users/xavie/OneDrive/Desktop/TradeGen/Github/tradegen/contracts/interfaces/IAddressResolver.sol",
+      "exportedSymbols": {
+        "IAddressResolver": [
+          1010
+        ]
+      },
+      "license": null
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.5",
+            ".0"
+          ]
+        },
+        "id": 951,
+        "name": "PragmaDirective",
+        "src": "0:24:2"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            1010
+          ],
+          "name": "IAddressResolver",
+          "scope": 1011
+        },
+        "children": [
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "04433bbc",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getContractAddress",
+              "overrides": null,
+              "scope": 1010,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @dev Given a contract name, returns the address of the contract\n @param contractName The name of the contract\n @return address The address associated with the given contract name"
+                },
+                "id": 952,
+                "name": "StructuredDocumentation",
+                "src": "62:209:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "contractName",
+                      "overrides": null,
+                      "scope": 959,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 953,
+                        "name": "ElementaryTypeName",
+                        "src": "305:6:2"
+                      }
+                    ],
+                    "id": 954,
+                    "name": "VariableDeclaration",
+                    "src": "305:26:2"
+                  }
+                ],
+                "id": 955,
+                "name": "ParameterList",
+                "src": "304:28:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 959,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 956,
+                        "name": "ElementaryTypeName",
+                        "src": "356:7:2"
+                      }
+                    ],
+                    "id": 957,
+                    "name": "VariableDeclaration",
+                    "src": "356:7:2"
+                  }
+                ],
+                "id": 958,
+                "name": "ParameterList",
+                "src": "355:9:2"
+              }
+            ],
+            "id": 959,
+            "name": "FunctionDefinition",
+            "src": "277:88:2"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "683ad58f",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "checkIfTradingBotAddressIsValid",
+              "overrides": null,
+              "scope": 1010,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @dev Given an address, returns whether the address belongs to a trading bot\n @param tradingBotAddress The address to validate\n @return bool Whether the given address is a valid trading bot address"
+                },
+                "id": 960,
+                "name": "StructuredDocumentation",
+                "src": "373:227:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "tradingBotAddress",
+                      "overrides": null,
+                      "scope": 967,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 961,
+                        "name": "ElementaryTypeName",
+                        "src": "647:7:2"
+                      }
+                    ],
+                    "id": 962,
+                    "name": "VariableDeclaration",
+                    "src": "647:25:2"
+                  }
+                ],
+                "id": 963,
+                "name": "ParameterList",
+                "src": "646:27:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 967,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 964,
+                        "name": "ElementaryTypeName",
+                        "src": "697:4:2"
+                      }
+                    ],
+                    "id": 965,
+                    "name": "VariableDeclaration",
+                    "src": "697:4:2"
+                  }
+                ],
+                "id": 966,
+                "name": "ParameterList",
+                "src": "696:6:2"
+              }
+            ],
+            "id": 967,
+            "name": "FunctionDefinition",
+            "src": "606:97:2"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "debd7e8e",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "checkIfStrategyAddressIsValid",
+              "overrides": null,
+              "scope": 1010,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @dev Given an address, returns whether the address belongs to a strategy\n @param strategyAddress The address to validate\n @return bool Whether the given address is a valid strategy address"
+                },
+                "id": 968,
+                "name": "StructuredDocumentation",
+                "src": "711:219:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "strategyAddress",
+                      "overrides": null,
+                      "scope": 975,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 969,
+                        "name": "ElementaryTypeName",
+                        "src": "975:7:2"
+                      }
+                    ],
+                    "id": 970,
+                    "name": "VariableDeclaration",
+                    "src": "975:23:2"
+                  }
+                ],
+                "id": 971,
+                "name": "ParameterList",
+                "src": "974:25:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 975,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 972,
+                        "name": "ElementaryTypeName",
+                        "src": "1023:4:2"
+                      }
+                    ],
+                    "id": 973,
+                    "name": "VariableDeclaration",
+                    "src": "1023:4:2"
+                  }
+                ],
+                "id": 974,
+                "name": "ParameterList",
+                "src": "1022:6:2"
+              }
+            ],
+            "id": 975,
+            "name": "FunctionDefinition",
+            "src": "936:93:2"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "e51f8aba",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "checkIfPoolAddressIsValid",
+              "overrides": null,
+              "scope": 1010,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @dev Given an address, returns whether the address belongs to a user pool\n @param poolAddress The address to validate\n @return bool Whether the given address is a valid user pool address"
+                },
+                "id": 976,
+                "name": "StructuredDocumentation",
+                "src": "1037:217:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "poolAddress",
+                      "overrides": null,
+                      "scope": 983,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 977,
+                        "name": "ElementaryTypeName",
+                        "src": "1295:7:2"
+                      }
+                    ],
+                    "id": 978,
+                    "name": "VariableDeclaration",
+                    "src": "1295:19:2"
+                  }
+                ],
+                "id": 979,
+                "name": "ParameterList",
+                "src": "1294:21:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 983,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 980,
+                        "name": "ElementaryTypeName",
+                        "src": "1339:4:2"
+                      }
+                    ],
+                    "id": 981,
+                    "name": "VariableDeclaration",
+                    "src": "1339:4:2"
+                  }
+                ],
+                "id": 982,
+                "name": "ParameterList",
+                "src": "1338:6:2"
+              }
+            ],
+            "id": 983,
+            "name": "FunctionDefinition",
+            "src": "1260:85:2"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "534e785c",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "setContractAddress",
+              "overrides": null,
+              "scope": 1010,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @dev Updates the address for the given contract; meant to be called by AddressResolver owner\n @param contractName The name of the contract\n @param newAddress The new address for the given contract"
+                },
+                "id": 984,
+                "name": "StructuredDocumentation",
+                "src": "1353:227:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "contractName",
+                      "overrides": null,
+                      "scope": 991,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 985,
+                        "name": "ElementaryTypeName",
+                        "src": "1614:6:2"
+                      }
+                    ],
+                    "id": 986,
+                    "name": "VariableDeclaration",
+                    "src": "1614:26:2"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "newAddress",
+                      "overrides": null,
+                      "scope": 991,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 987,
+                        "name": "ElementaryTypeName",
+                        "src": "1642:7:2"
+                      }
+                    ],
+                    "id": 988,
+                    "name": "VariableDeclaration",
+                    "src": "1642:18:2"
+                  }
+                ],
+                "id": 989,
+                "name": "ParameterList",
+                "src": "1613:48:2"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 990,
+                "name": "ParameterList",
+                "src": "1670:0:2"
+              }
+            ],
+            "id": 991,
+            "name": "FunctionDefinition",
+            "src": "1586:85:2"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "4343d159",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "addTradingBotAddress",
+              "overrides": null,
+              "scope": 1010,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @dev Adds a new trading bot address; meant to be called by the Strategy contract that owns the trading bot\n @param tradingBotAddress The address of the trading bot"
+                },
+                "id": 992,
+                "name": "StructuredDocumentation",
+                "src": "1679:188:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "tradingBotAddress",
+                      "overrides": null,
+                      "scope": 997,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 993,
+                        "name": "ElementaryTypeName",
+                        "src": "1903:7:2"
+                      }
+                    ],
+                    "id": 994,
+                    "name": "VariableDeclaration",
+                    "src": "1903:25:2"
+                  }
+                ],
+                "id": 995,
+                "name": "ParameterList",
+                "src": "1902:27:2"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 996,
+                "name": "ParameterList",
+                "src": "1938:0:2"
+              }
+            ],
+            "id": 997,
+            "name": "FunctionDefinition",
+            "src": "1873:66:2"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "034b08fb",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "addStrategyAddress",
+              "overrides": null,
+              "scope": 1010,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @dev Adds a new strategy address; meant to be called by the StrategyManager contract\n @param strategyAddress The address of the strategy"
+                },
+                "id": 998,
+                "name": "StructuredDocumentation",
+                "src": "1947:161:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "strategyAddress",
+                      "overrides": null,
+                      "scope": 1003,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 999,
+                        "name": "ElementaryTypeName",
+                        "src": "2142:7:2"
+                      }
+                    ],
+                    "id": 1000,
+                    "name": "VariableDeclaration",
+                    "src": "2142:23:2"
+                  }
+                ],
+                "id": 1001,
+                "name": "ParameterList",
+                "src": "2141:25:2"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1002,
+                "name": "ParameterList",
+                "src": "2175:0:2"
+              }
+            ],
+            "id": 1003,
+            "name": "FunctionDefinition",
+            "src": "2114:62:2"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "43499844",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "addPoolAddress",
+              "overrides": null,
+              "scope": 1010,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @dev Adds a new user pool address; meant to be called by the PoolManager contract\n @param poolAddress The address of the user pool"
+                },
+                "id": 1004,
+                "name": "StructuredDocumentation",
+                "src": "2184:155:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "poolAddress",
+                      "overrides": null,
+                      "scope": 1009,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 1005,
+                        "name": "ElementaryTypeName",
+                        "src": "2369:7:2"
+                      }
+                    ],
+                    "id": 1006,
+                    "name": "VariableDeclaration",
+                    "src": "2369:19:2"
+                  }
+                ],
+                "id": 1007,
+                "name": "ParameterList",
+                "src": "2368:21:2"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1008,
+                "name": "ParameterList",
+                "src": "2398:0:2"
+              }
+            ],
+            "id": 1009,
+            "name": "FunctionDefinition",
+            "src": "2345:54:2"
+          }
+        ],
+        "id": 1010,
+        "name": "ContractDefinition",
+        "src": "28:2374:2"
+      }
+    ],
+    "id": 1011,
+    "name": "SourceUnit",
+    "src": "0:2402:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.12+commit.27d51765.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.1",
+  "updatedAt": "2021-07-07T15:23:52.234Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "addPoolAddress(address)": {
+        "details": "Adds a new user pool address; meant to be called by the PoolManager contract",
+        "params": {
+          "poolAddress": "The address of the user pool"
+        }
+      },
+      "addStrategyAddress(address)": {
+        "details": "Adds a new strategy address; meant to be called by the StrategyManager contract",
+        "params": {
+          "strategyAddress": "The address of the strategy"
+        }
+      },
+      "addTradingBotAddress(address)": {
+        "details": "Adds a new trading bot address; meant to be called by the Strategy contract that owns the trading bot",
+        "params": {
+          "tradingBotAddress": "The address of the trading bot"
+        }
+      },
+      "checkIfPoolAddressIsValid(address)": {
+        "details": "Given an address, returns whether the address belongs to a user pool",
+        "params": {
+          "poolAddress": "The address to validate"
+        },
+        "returns": {
+          "_0": "bool Whether the given address is a valid user pool address"
+        }
+      },
+      "checkIfStrategyAddressIsValid(address)": {
+        "details": "Given an address, returns whether the address belongs to a strategy",
+        "params": {
+          "strategyAddress": "The address to validate"
+        },
+        "returns": {
+          "_0": "bool Whether the given address is a valid strategy address"
+        }
+      },
+      "checkIfTradingBotAddressIsValid(address)": {
+        "details": "Given an address, returns whether the address belongs to a trading bot",
+        "params": {
+          "tradingBotAddress": "The address to validate"
+        },
+        "returns": {
+          "_0": "bool Whether the given address is a valid trading bot address"
+        }
+      },
+      "getContractAddress(string)": {
+        "details": "Given a contract name, returns the address of the contract",
+        "params": {
+          "contractName": "The name of the contract"
+        },
+        "returns": {
+          "_0": "address The address associated with the given contract name"
+        }
+      },
+      "setContractAddress(string,address)": {
+        "details": "Updates the address for the given contract; meant to be called by AddressResolver owner",
+        "params": {
+          "contractName": "The name of the contract",
+          "newAddress": "The new address for the given contract"
+        }
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

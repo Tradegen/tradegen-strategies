@@ -1,0 +1,22 @@
+{
+  "name": "tradegen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "celo_deploy.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "@celo/contractkit": "^1.2.0",
+    "assert": "^2.0.0",
+    "bignumber": "^1.1.0",
+    "mocha": "^9.0.1",
+    "web3": "^1.3.6"
+  },
+  "scripts": {
+    "test": "mocha --timeout 180000"
+  },
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC"
+}

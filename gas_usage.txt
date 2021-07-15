@@ -1,0 +1,32 @@
+Address resolver: 1604195
+Base ubeswap adapter: 1624815
+Components: 2841417
+Ownable: 274430
+Settings: 3071722
+
+Down: 471717
+EMA: 1189289
+High of last N price updates: 1039972
+Interval: 1101183
+Latest price: 744369
+Low of last N price updates: 1049033
+N percent: 733020
+Nth price update: 1021213
+Previous N price updates: 885281
+SMA: 1315415
+Up: 474525
+
+Closes: 1059228
+Crosses above: 979932
+Crosses below: 1004780
+Fall by at least: 911047
+Fall by at most: 911035
+Falls to: 1039696
+Is above: 845643
+Is below: 852309
+Rise by at least: 911047
+Rise by at most: 911047
+Rises to: 1006028
+
+TestIndicator: 474645
+TestComparator: 575171
